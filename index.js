@@ -44,11 +44,15 @@ Use the copy function below to do the following:
     1. Receive two arguments: one for your new array and one for your original array
     2. Return the new array that holds an exact copy of the old array  
 */
-let copyFlavors = [...originalFlavors]
-function copy(...originalFlavors, ){
-    /*your here*/
-}    
 
+function copyFlavors(original, newFlav){
+    original = originalFlavors;
+    newFlav = [...originalFlavors];
+    
+       return(original, newFlav); 
+   
+  }    
+  console.log(copyFlavors);
 
 
 
@@ -64,7 +68,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(arr){
+    if (arr.length === 31){
+        return true;
+      }  else{
+          return false;
+      }
+    }
+    console.log(is31Flavours(originalFlavors));
    /*your code here*/
 }
 
@@ -80,8 +91,11 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(/*your code here*/){
+let newFlavor = "Rainbow Sherbert"
+function addFlavor(originalFlavors, newFlavor){
+    newFlavor = originalFlavors.unshift("Rainbow Sherbert");
+    console.log(originalFlavors);
+    return originalFlavors;
    /*your code here*/
 }
 
@@ -97,8 +111,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(arr){
+    arr.pop();
+    console.log(arr);
+    return arr;
+   
 }
 
 

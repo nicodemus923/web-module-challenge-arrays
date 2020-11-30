@@ -45,16 +45,16 @@ Use the copy function below to do the following:
     2. Return the new array that holds an exact copy of the old array  
 */
 
-let newArray = []
+let newArray = [];
 function copy(array){
     return newArray = [array];
 }    
 console.log(copy(originalFlavors));
 
-function copy(array){
-  return [...array];
-}
-console.log(copy(originalFlavors));
+// function copy(array){
+//   return [...array];
+// }
+// console.log(copy(originalFlavors));
 
 
 

@@ -41,13 +41,21 @@ With all of these changes going on, we don't want to lose track of the actual, o
 
 /*
 Use the copy function below to do the following:
-    1. Receive two arguments: one for your new array and one for your original array
+    1. Receive TWO ARGUMENTS(??): one for your new array and one for your original array
     2. Return the new array that holds an exact copy of the old array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+let newArray = []
+function copy(array){
+    return newArray = [array];
 }    
+console.log(copy(originalFlavors));
+
+function copy(array){
+  return [...array];
+}
+console.log(copy(originalFlavors));
+
 
 
 
@@ -64,9 +72,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
-}
+function is31Flavors(array){
+    if (array.length === 31){
+      return true;
+    }else {
+      return false;
+    }
+  }
+  
+  console.log(is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,9 +95,15 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+
+function addFlavor(array, newFlavor){
+    array.unshift(newFlavor);
+  return array;
 }
+
+addFlavor(originalFlavors,"Rainbow Sherbert");
+
+console.log(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀

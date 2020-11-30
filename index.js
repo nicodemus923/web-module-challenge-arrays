@@ -117,10 +117,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
-}
-
+function removeLastFlavor(array){
+    array.pop(); //why need ()? because a method is a function? 
+    return array;
+  }
+  
+  console.log(removeLastFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -133,10 +135,11 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
-}
-
+function getFlavorByIndex(array, index){
+    return array[index];
+   }
+   
+   console.log(getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -152,10 +155,18 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
-
+function removeFlavorByName(array, lameFlavor){
+    for(let i = 0; i < array.length; i++){ //looping through the array
+      if(array[i] === lameFlavor){ //...until it finds a match to the input
+        array.splice(i,1) // ...then takes that match and removes on that
+      return array;  // ...then returns the resulting array. 
+      }
+    }
+  }
+  
+  console.log(removeFlavorByName(originalFlavors, "Chocolate Chip"));
+                                  // lameFlavor must be in "" 
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -176,10 +187,17 @@ Use the filterByWord function below to do the following:
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, flavor){ //parameters we'll be using
+  let newArray = []; //declare a new array we'll be using 
+    for(let i = 0; i <= array.length; i++){//loop through each char of a given array
+      if(array[i].includes(flavor)){//if any item in a given array includes the entered flavor
+        newArray.push(array[i])//...then add it to the newArray that we declared. 
+      }
+    }
+  return newArray; //return the newArray
 }
+
+console.log(filterByWord(originalFlavors, "chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
